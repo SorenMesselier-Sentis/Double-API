@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.disney-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.SingleDisney {
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    width: 320px;
+    height: 450px;
+    object-fit: contain;
+    background-color: #0A3F8F;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px #0c0c0c57;
+    cursor: pointer;
+}
+
+.disney-img {
+    width: 150px;
+}
