@@ -16,7 +16,7 @@ Javascript
 ## Use
 <hr>
 
-For the good functioning of the project you will just have to go on [Link](). On the site you will find 2 logos, the **Disneyland** logo and the **Rick and Morty** logo in the navbar, then move your mouse over the card of the desired character.
+For the good functioning of the project you will just have to go on [Link](http://iim-api-soren-m-s.sorenmsts.tk/). On the site you will find 2 logos, the **Disneyland** logo and the **Rick and Morty** logo in the navbar, then move your mouse over the card of the desired character.
 
 Just click on the logo of your choice to find the information corresponding to the desired universe. About the part **Disneyland** you will see the first appearance of the desired character.
 
