@@ -1,28 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
 }
+
+body{
+    background-color: #072A5F;
+}
+
+nav {
+    z-index: 110;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    align-items: center;
+    top: 0;
+    background-color: #031530;
+    height: 10vh;
+    box-shadow: 8px 4px 2rem #031530;
+}
+
+nav img {
+    height: 75px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.showD, .prevD {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #031530;
+    text-decoration: none;
+    border: none;
+    color: #f1f1f1;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.showD:hover, .prevD:hover {
+    color: #031530;
+    background-color: #0A3F8F;
+    box-shadow: 8px 4px 2rem #031530;
+}
+
+#showR, #prevR {
+    display: none;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #031530;
+    text-decoration: none;
+    border: none;
+    color: #f1f1f1;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.showR:hover, .prevR:hover {
+    color: #031530;
+    background-color: #0A3F8F;
+    box-shadow: 8px 4px 2rem #031530;
+}
+/******************************************************************* Disney card style  *******************************************************************/
 
 .disney-card {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
 }
 
 .SingleDisney {
     margin: 2rem;
-    padding: 1rem;
-    text-align: center;
-    width: 320px;
-    height: 450px;
-    object-fit: contain;
+    position: relative;
+    width: 300px;
+    height: 430px;
+    box-shadow: 8px 4px 2rem #031530;
     background-color: #0A3F8F;
-    border-radius: 5px;
-    box-shadow: 4px 4px 8px #0c0c0c57;
-    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.SingleDisney::before {
+    z-index: 60;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D54BF;
+    clip-path: circle(100px at 10% 90%);
+    transition: 0.4s ease-in-out;
+}
+
+.SingleDisney:hover::before {
+    clip-path: circle(200px at 50% 100%);
+}
+
+.SingleDisney::after {
+    content: 'Disney';
+    position: absolute;
+    top: 35%;
+    left: -10%;
+    font-size: 7.5rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #00000025;
+}
+
+.imgBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 425px;
+    transition: 0.5s;
+}
+
+.imgBox:hover {
+    top: 0%;
+    transform: translateY(0%);
 }
 
 .disney-img {
-    width: 150px;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50% -50%);
+    width: 95%;
+    height: 45%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1rem;
+}
+
+.contentBox {
+    z-index: 120;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+    padding: 8px 20px;
+}
+
+.SingleDisney:hover .contentBox {
+    height: 250px;
+}
+
+.contentBox h2 {
+    color: #CFE1FC;
+}
+
+.SingleDisney:hover .contentBox h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.contentBox p {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #031530;
+}
+
+/******************************************************************* Rick card style  *******************************************************************/
+
+.rick-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+
+.SingleRick {
+    margin: 2rem;
+    position: relative;
+    width: 300px;
+    height: 430px;
+    box-shadow: 8px 4px 2rem #031530;
+    background-color: #0A3F8F;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.SingleRick::before {
+    z-index: 60;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D54BF;
+    clip-path: circle(100px at 10% 90%);
+    transition: 0.4s ease-in-out;
+}
+
+.SingleRick:hover::before {
+    clip-path: circle(200px at 50% 100%);
+}
+
+.SingleRick::after {
+    content: 'Rick';
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 7.5rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #00000025;
+}
+
+.SingleRick:hover .contentBox {
+    height: 250px;
+}
+
+.SingleRick:hover .contentBox h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.5s;
 }
